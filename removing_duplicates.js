@@ -1,6 +1,6 @@
 function rem_duplicate(arr){
     let x = 0 ;
-    // let k = 1;
+    let k = 1;
 
     for(let i = 0 ; i < arr.length ;i++){
 
@@ -11,6 +11,13 @@ function rem_duplicate(arr){
         }
     }
     return x+1;
+
+    //Another way 
+    let hash = {}; 
+    for(let i = 0 ; i < arr.length ; i++){
+        hash[arr[i]] =  true ;  
+    }
+    return Object.keys(hash);  
     
 
     
@@ -20,7 +27,7 @@ function rem_duplicate(arr){
 
 }
 
-let arr = [2,2,3,3,4];
+let arr = [2,2,3,3,4 ,5 ,4];
 console.log(rem_duplicate(arr));
 
 
